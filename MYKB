@@ -1,0 +1,37 @@
+//
+// To install:
+// * patch evdev.lst
+// * patch evdev
+// * patch evdev.xml
+// * patch base.lst
+// * patch base
+// * patch base.xml
+// done!
+//
+// gsettings set org.gnome.desktop.input-sources xkb-options "['terminate:ctrl_alt_bksp', 'MYKB:MYKB']"
+//
+default partial modifier_keys
+xkb_symbols "MYKB" {
+    replace key <CAPS> { [ Control_L, Control_L ] };
+    replace key <LCTL> { [ Escape ] };
+    modifier_map Control { <CAPS>, Control_R } ;
+};
+
+// in rules/base.xml evdev.xml
+//    <group allowMultipleSelection="true">
+//      <configItem>
+//        <name>MYKB</name>
+//        <description>My modifications</description>
+//      </configItem>
+//      <option>
+//        <configItem>
+//          <name>MYKB:MYKB</name>
+//          <description>my modifs</description>
+//        </configItem>
+//      </option>
+//    </group>
+// in rules/base.lst evdev.lst
+//  MYKB                 My modifications
+//  MYKB:MYKB            My modifications
+// in rules/base evdev
+//  MYKB:MYKB         =   +MYKB(MYKB)
