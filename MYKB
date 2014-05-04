@@ -35,3 +35,6 @@ xkb_symbols "MYKB" {
 //  MYKB:MYKB            My modifications
 // in rules/base evdev
 //  MYKB:MYKB         =   +MYKB(MYKB)
+//
+// if you're on gnome (or derivatives), then run:
+// gsettings set org.gnome.desktop.input-sources xkb-options "['terminate:ctrl_alt_bksp', 'MYKB:MYKB']"
