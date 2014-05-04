@@ -18,4 +18,7 @@ This works on ubuntu 14.04 or something like that:
   to automatically set it at startup/login
 - pray future updates don't break this too badly
 
-These steps are also noted in the keymap itself.
+These steps are also noted in the keymap itself. They are also printed when doing a
+```sh
+# make install
+```
